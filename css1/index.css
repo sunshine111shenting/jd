@@ -1,0 +1,192 @@
+.grid{
+	height: 480px;   /*父亲设置了高度,就不要清除浮动了*/
+}
+/*中间的左边区域*/
+.grid-col1{
+	width: 190px;
+	height: 100%;
+	background-color: #6e6568;
+	color: #fff;
+	font-size: 14px;	 /* 是反斜杠的,不是字的，目的是要和字一样大*/
+}
+.grid-col1 a{
+	color: #fff;
+	font-size: 14px;	 /* 是给链接文字的*/
+	margin: 0 3px;
+}
+.grid-col1 a:hover{
+	color: #F10215;
+}
+.grid-col1 ul{
+	padding: 10px 0;
+}
+.grid-col1 ul li{
+	padding-left: 15px;      /*这里用padding而不是margin,因为下面有鼠标经过的效果.*/
+	height: 29px;
+	line-height: 24px;       /*重要 */
+}
+.grid-col1 ul li:hover{
+	background-color: darkgray;
+}
+/*中间的右边区域*/
+.grid-col2{
+	width: 790px;
+	height: 100%;  /*要设置,不然只能是内容撑开的高度,分清楚父亲和子类的高度*/
+	margin-left: 10px;
+}
+.grid-col2-b div{
+   float: left;
+   margin-top: 10px;
+}
+.grid-col2-b div:last-child{
+   float: right;
+   margin-top: 10px;
+}
+.grid-col2-t{
+	position: relative;
+}
+.arrow-l, 
+.arrow-r{
+	position: absolute;
+	top: 50%;       
+	width: 30px;
+	height: 60px;
+	color: rgba(255,255,255,.6);
+	background: rgba(0,0,0,0.3);
+	transform: translateY(-50%);   /* 垂直居中*/
+	text-align: center;	
+	line-height: 60px;
+	font-size: 30px;
+	font-family: arial;
+	font-weight: normal;
+}
+.arrow-r{
+	right: 0;   /*因为默认靠左边,所以左边的就不要设置了*/
+}
+.arrow-l{
+	left: 0;  /*不知道后来改变图片就没有默认靠左了.*/
+}
+.circle{
+	width: 175px;
+	height: 20px;
+	position: absolute;
+	border-radius: 10px;
+	background: rgba(0,0,0,0.3);
+	left: 50%;
+	bottom: 20px;
+	transform: translateX(-50%);
+	padding-left: 10px;	 /*解决圆圈没有居中的问题*/
+}
+.circle li{
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: #fff;
+	margin: 4px;   /*量取的不一定精确,根据需要调整*/
+	float: left;	
+	cursor: pointer;
+}
+.circle .current{   /* 不是直接.current,因为权重不够*/
+	background-color: #F10215;
+}
+/*中间的右边区域*/
+.grid-col3{
+	width: 190px;
+	height: 100%;
+}
+.login{
+	height: 85px;   /*115-30=85;*/
+	border-bottom: 1px solid #e6e6e6;
+	padding: 15px;
+	background-color: #fff;
+}
+.login-t{
+	width: 94px;   /*重要*/
+	height: 56px;
+	color: #666666;
+	font-size: 12px;	
+	line-height: 22px;
+	white-space: nowrap;  /*强制一行内显示*/
+	overflow: hidden;     /*溢出隐藏*/
+	text-overflow: ellipsis;/*用省略号表示溢出的部分*/
+	padding-left: 50px;	     /*重要，把文字挤到右边*/
+	position: relative;
+}
+.login-t a{
+	color: #666666;
+}
+.login-t a:hover{
+	color: #f10512;   /*层叠的问题,起初有hover色的,但是后来设置了a的颜色后,就不表现了.*/
+}
+.login-t img{
+	width: 100%;/*因为图片是100×100,而盒子只有40×40,要全部显示就要100%*/
+	border-radius: 50%;
+}
+.user-info{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	left: 0;
+	top: 0;	
+}
+.login-b a{
+	display: inline-block;
+	width: 70px;        /*这里量取的高度宽度都没有包含边框*/
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	border: 2px solid #F10215;
+	margin-right: 3px;
+	color: #F10215;
+}
+.login-b a:hover{
+	background-color: #F10215;
+	color: #fff;
+}
+.news{
+	height: 155px;
+	border-bottom: 1px solid #e6e6e6;
+	background: #fff;
+	padding: 7px 12px 0;
+	box-sizing: border-box;
+	
+}
+.news-t{	
+	height: 19px; /*注意这个高度的量取*/
+	border-bottom: 1px solid #e6e6e6;	
+	color: #666;
+	padding-top: 3px;
+	position: relative;	
+}
+.news-t a{
+	float: left;  /*因为要设置行内元素的高宽*/
+	height: 17px;
+	line-height: 17px;
+}
+.news-t div{
+	width: 28px;
+	height: 2px;
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	background-color: #F10215;
+}
+.news-b{
+	padding-top: 18px;
+}
+.news-b a{
+	display: block;
+	line-height: 24px;	
+}
+.cuxiao{
+	width: 38px;	
+	border-right: 2px solid #e6e6e6;
+}
+.gonggao{
+	width: 85px;   /*100-15=85*/
+	padding-left: 15px;
+}
+.expand{
+	height: 210px;
+	background: green;
+}
